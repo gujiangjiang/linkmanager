@@ -5,40 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>链接管理程序</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-        }
-        .form-group {
-            margin-bottom: 10px;
-        }
-        .form-group input, .form-group select {
-            padding: 5px;
-            width: 300px;
-        }
-        .item-list {
-            margin-top: 20px;
-        }
-        .item {
-            margin-bottom: 10px;
-        }
-        .item button {
-            margin-left: 10px;
-        }
-        #add-link-form, #add-user-form, #link-management, #user-management, #data-management {
-            display: none;
-        }
-        .footer-buttons {
-            margin-top: 20px;
-        }
-        .button-group {
-            display: flex;
-            gap: 10px;
-        }
+        body { font-family: Arial, sans-serif; }
+        .form-group, .item { margin-bottom: 10px; }
+        .form-group input, .form-group select { padding: 5px; width: 300px; }
+        .item-list { margin-top: 20px; }
+        .item button { margin-left: 10px; }
+        #add-link-form, #add-user-form, #link-management, #user-management, #data-management { display: none; }
+        .footer-buttons { margin-top: 20px; }
+        .button-group { display: flex; gap: 10px; }
     </style>
 </head>
 <body>
     <h1>链接管理程序</h1>
-
     <h2>请选择链接和用户</h2>
     <div class="form-group">
         <label for="link-selector">选择链接：</label>
@@ -48,14 +26,10 @@
         <label for="employee-selector">选择用户：</label>
         <select id="employee-selector"></select>
     </div>
-    
-    <!-- 管理按钮 -->
     <div class="button-group">
         <button id="manage-btn">管理</button>
         <button id="visit-link">访问</button>
     </div>
-
-    <!-- 管理子菜单 -->
     <div id="link-submenu" style="display: none;">
         <button id="link-management-btn">链接管理</button>
     </div>
@@ -65,16 +39,12 @@
     <div id="data-submenu" style="display: none;">
         <button id="data-management-btn">数据管理</button>
     </div>
-
-    <!-- 数据管理 -->
     <div id="data-management">
         <h3>数据管理</h3>
         <button id="export-data">导出数据</button>
         <button id="import-data">导入数据</button>
         <input type="file" id="import-file" style="display:none">
     </div>
-
-    <!-- 链接管理 -->
     <div id="link-management">
         <h3>链接管理</h3>
         <button id="add-link">添加链接</button>
@@ -99,8 +69,6 @@
         </div>
         <div id="link-list" class="item-list"></div>
     </div>
-
-    <!-- 用户管理 -->
     <div id="user-management">
         <h3>用户管理</h3>
         <button id="add-user">添加用户</button>
@@ -118,7 +86,6 @@
         </div>
         <div id="user-list" class="item-list"></div>
     </div>
-
     <script src="app.js"></script>
 </body>
 </html>
